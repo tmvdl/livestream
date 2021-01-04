@@ -1,63 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta id="theme-color" name="theme-color" content="#000000" />
+<head>
+    <title>getScreen Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header class="tarefas">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="img/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a id="start">Captura janela</a>
+                </li>
+                <li>
+                    <a id="stop">Parar</a>
+                </li>
+                <li>
+                    <a id="controlCam" onclick="webCam()">Esconder Webcam</a>
+                </li>
+             </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="" id="login" class="botao">Login</a>
+            <a href="" class="botao destaque">Iniciar Transmissão</a>
+        </aside>
+    </header>
 
-    <title>Video</title>
+    <div id="screenLayout">
+        <video id="getScreen" autoplay></video>
+        <video id="getCam" autoplay></video>
+    </div>
+    
+    
 
-    <style type="text/css">
-      *,
-      *::after,
-      *::before {
-        border: none;
-        margin: 0px;
-        outline: none;
-        padding: 0px;
-      }
-
-      body {
-        background-color: black;
-        text-align: center;
-      }
-
-      button {
-        background-color: rgba(0, 0, 0, 0);
-        bottom: 0;
-        color: white;
-        display: inline-block;
-        font-size: 3em;
-        height: 100vh;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100vw;
-        z-index: 10;
-      }
-
-      video {
-        display: inline-block;
-        height: 100%;
-        line-height: 100vh;
-        max-height: 100vh;
-        max-width: 100vw;
-        vertical-align: middle;
-        width: 100%;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <video id="video" autoplay muted></video>
-    <button id="button">Start Recording</button>
-    <span id="errorMsg"></span>
-
-    <script src="main.js" async></script>
-  </body>
+</body>
+<script src="js/getScreen.js"></script>
+<script src="js/getCam.js"></script>
+<script src="js/main.js"></script>
 </html>
+
